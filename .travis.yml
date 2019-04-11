@@ -1,7 +1,7 @@
 install:
 script:
   - npm install -g canopy-js
-  - canopy build --for-static-assets
+  - CANOPY_LOGGING=true canopy build --for-static-assets
 after_success:
   - bash script/deploy.sh
 env:
